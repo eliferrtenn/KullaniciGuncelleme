@@ -1,0 +1,20 @@
+﻿@model KullaniciGuncelleme.Models.Entity.Users
+@{
+    ViewBag.Title = "KullaniciGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "User", FormMethod.Post)) { 
+<div class="form-group">
+    @Html.LabelFor(m => m.UserID)
+    @Html.TextBoxFor(m => m.UserID, new { @class = "form-control" })
+    @Html.LabelFor(m => m.UserName)
+    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+    @Html.LabelFor(m => m.UserSurname)
+    @Html.TextBoxFor(m => m.UserSurname, new { @class = "form-control" })
+</div>
+<div>
+    <button class="btn btn-warning">Kullanıcı Güncelle</button>
+</div>
+}
+

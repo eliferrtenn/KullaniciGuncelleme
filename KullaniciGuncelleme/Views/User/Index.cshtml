@@ -1,0 +1,28 @@
+﻿@using KullaniciGuncelleme.Models.Entity
+@model List<Users>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>User Surname</th>
+    </tr>
+    <tbody>
+        @foreach (var ktgr in Model)
+        {
+            <tr>
+                <td>@ktgr.UserID</td>
+                <td>@ktgr.UserName</td>
+                <td>@ktgr.UserSurname</td>
+                <td><a href="/User/KullaniciGetir/@ktgr.UserID" class="btn btn-danger">GÜNCELLE</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
